@@ -865,7 +865,6 @@ service qti-testscripts /system/bin/sh /system/etc/init.qcom.testscripts.sh
     user root
     disabled
     oneshot
-    seclabel u:r:qti-testscripts:s0
 
 service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
     class late_start
@@ -953,7 +952,6 @@ service profiler_daemon /system/bin/profiler_daemon
 service charger /system/bin/charger
     class charger
     group system graphics
-    seclabel u:r:charger:s0
 
 service vendor.ssr_diag /system/vendor/bin/ssr_diag
     class late_start
@@ -1078,7 +1076,6 @@ on property:vendor.display.lcd_density=*
 service logdumpd /system/bin/logcat -b all -v threadtime -D -w /dev/block/bootdevice/by-name/logdump
     class core
     writepid /dev/cpuset/system-background/tasks
-    seclabel u:r:logdumpd:s0
     disabled
 
 # Logdumpd is enabled only for userdebug non-perf build

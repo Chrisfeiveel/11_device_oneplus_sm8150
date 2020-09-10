@@ -100,13 +100,11 @@ service charger_logkit /charger_log
     oneshot
     disabled
     class charger
-    seclabel u:r:charger_log:s0
     
 service dumpstate_log /system/bin/dumpstate -o /sdcard/dumpstate.log
     oneshot
     disabled
     class main
-    seclabel u:r:logserver:s0
 
 service oemasserttip /system/bin/asserttip
     class main

@@ -8,7 +8,6 @@ service console /system/bin/xxx
     user root
     group shell log
     oneshot
-    seclabel u:r:shell:s0
 
 #this service is a non-use service and just use to duplicate real surfaceflinger service
 service surfaceflinger /system/bin/xxx
