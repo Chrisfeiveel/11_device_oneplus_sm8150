@@ -12,6 +12,8 @@ VENDOR_PATH := device/oneplus/sm8150-common
 
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
