@@ -236,15 +236,6 @@ on property:sys.boot_completed=1
     setprop debug.boot_completed 1 
 #endif /*VENDOR_EDIT*/
 
-on property:sys.boot_completed=1 && persist.vendor.usb.config=none && property:ro.boot.type=auto
-    setprop persist.sys.usb.config adb
-
-on property:sys.boot_completed=1 && persist.vendor.usb.config=none && property:ro.boot.type=debug
-    setprop persist.sys.usb.config adb
-
-on property:sys.boot_completed=1 && persist.vendor.usb.config=none && property:ro.boot.type=sdebug
-    setprop persist.sys.usb.config adb
-
 #ifdef VENDOR_EDIT
 #/*infi@bsp 2018/05/07 select WIRELESS_CONTROLLER_REMOTE_NDIS for
 # MAC/Ubuntu usb-tethering compatible*/
