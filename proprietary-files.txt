@@ -1318,9 +1318,6 @@ vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql
 vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql
 
-# Telephony (qti-telephony-common) - cepheus
-product/framework/qti-telephony-common.jar|74adbf98e89531ac385ab5c4cea3c2549a0d24b0
-
 # Radio - IMS
 -product/app/uceShimService/uceShimService.apk
 -product/priv-app/ims/ims.apk|80acb4d9084f59b90b0c3deb9d3977fd244806c3
