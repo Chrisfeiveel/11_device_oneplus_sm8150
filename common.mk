@@ -517,14 +517,14 @@ PRODUCT_PACKAGES += \
 # VNDK
 # Update this list with what each blob is actually for
 PRODUCT_PACKAGES += \
+    libstdc++.vendor \
+    vndk-sp \
+    vndk_package \
     com.android.vndk.current.on_vendor
 
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-vendorcompat \
     libprotobuf-cpp-full-vendorcompat \
-
-PRODUCT_TARGET_VNDK_VERSION := 29
-PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 # Wifi
 PRODUCT_PACKAGES += \
