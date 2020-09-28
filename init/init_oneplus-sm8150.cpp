@@ -24,9 +24,9 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
-using android::base::SetProperty;
+using android::init::property_set;
 
-void SetProperty(char const prop[], char const value[])
+void property_override(char const prop[], char const value[])
 {
     prop_info *pi;
 
@@ -39,26 +39,26 @@ void SetProperty(char const prop[], char const value[])
 
 void load_12gb()
 {
-    SetProperty("dalvik.vm.heapstartsize","24m");
-    SetProperty("dalvik.vm.heapgrowthlimit","384m");
-    SetProperty("dalvik.vm.heaptargetutilization","0.42");
-    SetProperty("dalvik.vm.heapmaxfree","56m");
+    property_override("dalvik.vm.heapstartsize","24m");
+    property_override("dalvik.vm.heapgrowthlimit","384m");
+    property_override("dalvik.vm.heaptargetutilization","0.42");
+    property_override("dalvik.vm.heapmaxfree","56m");
 }
 
 void load_8gb()
 {
-    SetProperty("dalvik.vm.heapstartsize","24m");
-    SetProperty("dalvik.vm.heapgrowthlimit","256m");
-    SetProperty("dalvik.vm.heaptargetutilization","0.46");
-    SetProperty("dalvik.vm.heapmaxfree","48m");
+    property_override("dalvik.vm.heapstartsize","24m");
+    property_override("dalvik.vm.heapgrowthlimit","256m");
+    property_override("dalvik.vm.heaptargetutilization","0.46");
+    property_override("dalvik.vm.heapmaxfree","48m");
 }
 
 void load_6gb()
 {
-    SetProperty("dalvik.vm.heapstartsize","16m");
-    SetProperty("dalvik.vm.heapgrowthlimit","256m");
-    SetProperty("dalvik.vm.heaptargetutilization","0.5");
-    SetProperty("dalvik.vm.heapmaxfree","32m");
+    property_override("dalvik.vm.heapstartsize","16m");
+    property_override("dalvik.vm.heapgrowthlimit","256m");
+    property_override("dalvik.vm.heaptargetutilization","0.5");
+    property_override("dalvik.vm.heapmaxfree","32m");
 }
 
 /* Get Ram size for different variants */
