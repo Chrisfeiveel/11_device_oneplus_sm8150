@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product-if-exists, vendor/oneplus/sm8150-common/sm8150-common-vendor.mk)
 
 #Gapps
-$(call inherit-product-if-exists, vendor/google/gms/config.mk)
+$(call inherit-product-if-exists, vendor/gms/common/common-vendor.mk)
 $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 
 # Additional native libraries
